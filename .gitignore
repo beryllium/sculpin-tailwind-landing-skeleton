@@ -1,0 +1,5 @@
+node_modules
+output_dev
+output_prod
+/source/build/*
+/vendor/*

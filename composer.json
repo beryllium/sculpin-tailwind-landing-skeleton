@@ -1,0 +1,17 @@
+{
+    "name": "beryllium/sculpin-tailwind-landing-skeleton",
+    "description": "Skeleton for Sculpin-based landing page websites",
+    "homepage": "https://whateverthing.com",
+    "keywords": ["sculpin", "sculpin-skeleton"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kevin Boyd",
+            "email": "kevin.boyd@gmail.com",
+            "homepage": "https://whateverthing.com"
+        }
+    ],
+    "require": {
+        "sculpin/sculpin": "^3.0"
+    }
+}
