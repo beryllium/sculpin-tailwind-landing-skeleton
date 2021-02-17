@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "This script has been replaced by the 'composer publish' custom command"
+echo
+echo "Continuing with legacy execution ..."
+
 vendor/bin/sculpin generate --env=prod
 if [ $? -ne 0 ]; then echo "Could not generate the site"; exit 1; fi
 
