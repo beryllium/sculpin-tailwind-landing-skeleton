@@ -1,0 +1,38 @@
+---
+layout: default
+generator: [projects_tag_index, pagination]
+pagination:
+    provider: page.tag_projects
+    max_per_page: 10
+---
+<h1>{{ page.tag|capitalize }}</h1>
+<section class="bg-white py-4 font-sans">
+  <div class="row">
+    <div class="container text-center m-auto">
+    <div class="section_title pb-6">
+    <h4 class="main_title text-3xl">Proxectos</h4>
+            <h6 class="uppercase">Tags</h6>
+    <h2 class="main_title uppercase text-red-800">{{ page.tag }}</h2>
+    </div> 
+    </div>
+    </div>
+
+  <div class="container m-auto flex flex-wrap items-center justify-start">
+<ul>
+    {% for project in page.pagination.items %}
+        <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+    {% endfor %}
+</ul>
+</div>
+
+<nav>
+    {% if page.pagination.previous_page or page.pagination.next_page %}
+    {% if page.pagination.previous_page %}
+    <a href="{{ site.url }}{{ page.pagination.previous_page.url }}">Newer Projects</a>
+    {% endif %}
+    {% if page.pagination.next_page %}
+    <a href="{{ site.url }}{{ page.pagination.next_page.url }}">Older Projects</a>
+    {% endif %}
+    {% endif %}
+</nav>
+</section>

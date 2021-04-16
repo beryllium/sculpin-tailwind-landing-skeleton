@@ -1,70 +1,161 @@
 <!DOCTYPE html>
-<html class="h-full">
-<head>
-    <title>{% block title %}{{ page.title }}{% endblock %} {{ site.title }} | {{ site.subtitle }}</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {% block head_meta %}
-    <meta name="robots" content="noindex, follow">
-    {% endblock %}
-    <link rel="apple-touch-startup-image" href="{{ site.url }}/build/2048x2048.png">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="shortcut icon" sizes="76x76" href="{{ site.url }}/build/jackson/76x76.png">
-    <link rel="shortcut icon" sizes="120x120" href="{{ site.url }}/build/jackson/120x120.png">
-    <link rel="shortcut icon" sizes="128x128" href="{{ site.url }}/build/jackson/128x128.png">
-    <link rel="shortcut icon" sizes="152x152" href="{{ site.url }}/build/jackson/152x152.png">
-    <link rel="shortcut icon" sizes="196x196" href="{{ site.url }}/build/jackson/196x196.png">
-    <link rel="shortcut icon" sizes="512x512" href="{{ site.url }}/build/jackson/512x512.png">
-    <link rel="shortcut icon" sizes="1024x1024" href="{{ site.url }}/build/jackson/1024x1024.png">
-    <link rel="shortcut icon" sizes="2048x2048" href="{{ site.url }}/build/jackson/2048x2048.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ site.url }}/build/jackson/76x76.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ site.url }}/build/jackson/120x120.png">
-    <link rel="apple-touch-icon" sizes="128x128" href="{{ site.url }}/build/jackson/128x128.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ site.url }}/build/jackson/152x152.png">
-    <link rel="apple-touch-icon" sizes="196x196" href="{{ site.url }}/build/jackson/196x196.png">
-    <link rel="apple-touch-icon" sizes="512x512" href="{{ site.url }}/build/jackson/512x512.png">
-    <link rel="apple-touch-icon" sizes="1024x1024" href="{{ site.url }}/build/jackson/1024x1024.png">
-    <link rel="apple-touch-icon" sizes="2048x2048" href="{{ site.url }}/build/jackson/2048x2048.png">
+<html>
+	<head>
+		<title>
+			{% block title %}
+				{{ page.title }}
+			{% endblock %}
+			{{ site.title }}
+			|
+			{{ site.subtitle }}</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		{% block head_meta %}
+			<meta name="robots" content="noindex, follow">
+		{% endblock %}
+		<link rel="apple-touch-startup-image" href="{{ site.url }}/build/2048x2048.png">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="shortcut icon" sizes="76x76" href="{{ site.url }}/build/jackson/76x76.png">
+		<link rel="shortcut icon" sizes="120x120" href="{{ site.url }}/build/jackson/120x120.png">
+		<link rel="shortcut icon" sizes="128x128" href="{{ site.url }}/build/jackson/128x128.png">
+		<link rel="shortcut icon" sizes="152x152" href="{{ site.url }}/build/jackson/152x152.png">
+		<link rel="shortcut icon" sizes="196x196" href="{{ site.url }}/build/jackson/196x196.png">
+		<link rel="shortcut icon" sizes="512x512" href="{{ site.url }}/build/jackson/512x512.png">
+		<link rel="shortcut icon" sizes="1024x1024" href="{{ site.url }}/build/jackson/1024x1024.png">
+		<link rel="shortcut icon" sizes="2048x2048" href="{{ site.url }}/build/jackson/2048x2048.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="{{ site.url }}/build/jackson/76x76.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="{{ site.url }}/build/jackson/120x120.png">
+		<link rel="apple-touch-icon" sizes="128x128" href="{{ site.url }}/build/jackson/128x128.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="{{ site.url }}/build/jackson/152x152.png">
+		<link rel="apple-touch-icon" sizes="196x196" href="{{ site.url }}/build/jackson/196x196.png">
+		<link rel="apple-touch-icon" sizes="512x512" href="{{ site.url }}/build/jackson/512x512.png">
+		<link rel="apple-touch-icon" sizes="1024x1024" href="{{ site.url }}/build/jackson/1024x1024.png">
+		<link rel="apple-touch-icon" sizes="2048x2048" href="{{ site.url }}/build/jackson/2048x2048.png">
 
-    <link rel="stylesheet" href="{{ site.url }}/build/css/app.css"/>
+		<link
+		rel="stylesheet" href="{{ site.url }}/build/css/app.css"/>
+		<!-- Add fontawesome  -->
+		<script src="https://kit.fontawesome.com/b4b67584bc.js" crossorigin="anonymous"></script>
 
-    <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/atom.xml" title="{{ site.title }} activity feed" />
+		<link rel="alternate" type="application/atom+xml" href="{{ site.url }}/atom.xml" title="{{ site.title }} activity feed"/> {% block head_styles %}{% endblock %}{% block head_scripts %}{% endblock %}
+		</head>
+		<body class="antialiased flex flex-col h-full">
+			<nav class="font-sans bg-white text-center flex justify-between my-4 mx-auto container overflow-hidden">
+				<a href="/" class="block text-left">
+					<img src="https://stitches.hyperyolo.com/images/logo.png" class="h-10 sm:h-10 rounded-full" alt="logo">
+				</a>
+				<ul class="text-sm text-gray-700 list-none p-0 flex items-center">
+					<li>
+						<a href="/blog" class="inline-block py-2 px-3 text-gray-900 hover:text-gray-700 no-underline">Blog</a>
+					</li>
+					<li>
+						<a href="/projects" class="inline-block py-2 px-3 text-gray-900 hover:text-gray-700 no-underline">Projects</a>
+					</li>
+					<li>
+						<a href="#" class="inline-block py-2 px-3 text-gray-900 hover:text-gray-700 no-underline">Pricing</a>
+					</li>
+					<li class="pr-2">
+						<a href="#" class="inline-block py-2 px-3 text-gray-900 hover:text-gray-700 no-underline">FAQs</a>
+					</li>
+					<li class="pl-2 border-l">
+						<a href="#" class="inline-block py-2 px-3 text-gray-900 hover:text-gray-700 no-underline">Log In</a>
+					</li>
+					<button class="bg-black hover:bg-text-gray-800 text-white ml-4 py-2 px-3">
+						Sign Up
+					</button>
+				</ul>
+			</nav>
+			{% block content_wrapper %}
+				{% block content '' %}
+			{% endblock content_wrapper %}
 
-    {% block head_styles %}
-    {% endblock %}
-    {% block head_scripts %}
-    {% endblock %}
-</head>
-<body class="antialiased flex flex-col h-full">
-{% block content_wrapper %}{% block content '' %}{% endblock content_wrapper %}
 
-<footer class="w-full text-right border-t border-gray-400 p-3 pin-b">
-    <span>Copyright &copy; The Owner Of This Website</span>
-    <span class="pr-2 pl-2">/</span>
-    <span class="opacity-50">Powered by <a href="https://sculpin.io">Sculpin</a></span>
-</footer>
+			<footer class="font-sans bg-black text-white pt-8 px-4">
+				<div class="mx-auto container overflow-hidden flex flex-col lg:flex-row justify-between">
+					<a href="/" class="block mr-4 w-1/2">
+						<img src="http://ambosass.com/img/web/22_pk.png" class="w-32" alt="logo">
+					</a>
+					<div class="w-1/2 flex text-sm mt-6 lg:mt-0">
+						<ul class="text-gray-700 list-none p-0 font-thin flex flex-col text-left">
+							<li class="inline-block py-2 px-3 text-white uppercase no-underline font-medium tracking-wide">About</li>
+							<li>
+								<a href="#" class="inline-block py-2 px-3 text-gray-500 hover:text-gray-400 no-underline">Profile</a>
+							</li>
+							<li>
+								<a href="#" class="inline-block py-2 px-3 text-gray-500 hover:text-gray-400 no-underline">Portfolio</a>
+							</li>
+							<li>
+								<a href="#" class="inline-block py-2 px-3 text-gray-500 hover:text-gray-400 no-underline">Services</a>
+							</li>
+							<li>
+								<a href="#" class="inline-block py-2 px-3 text-gray-500 hover:text-gray-400 no-underline">Features</a>
+							</li>
+						</ul>
+						<ul class="text-gray-700 list-none p-0 font-thin flex flex-col text-left">
+							<li class="inline-block py-2 px-3 text-white uppercase no-underline font-medium tracking-wide">Company</li>
+							<li>
+								<a href="#" class="inline-block py-2 px-3 text-gray-500 hover:text-gray-400 no-underline">Press Release</a>
+							</li>
+							<li>
+								<a href="#" class="inline-block py-2 px-3 text-gray-500 hover:text-gray-400 no-underline">Mission</a>
+							</li>
+							<li>
+								<a href="#" class="inline-block py-2 px-3 text-gray-500 hover:text-gray-400 no-underline">Strategy</a>
+							</li>
+							<li>
+								<a href="#" class="inline-block py-2 px-3 text-gray-500 hover:text-gray-400 no-underline">Works</a>
+							</li>
+						</ul>
+						<ul class="text-gray-700 list-none p-0 font-thin flex flex-col text-left">
+							<li class="inline-block py-2 px-3 text-white uppercase no-underline font-medium tracking-wide"><!--Info--></li>
+							<li class="inline-block py-2 px-3 text-white text-right uppercase no-underline font-medium tracking-wide">
+								<p>ambosass.com</p>
+								<p>36204 VIGO</p>
+								<p>Spain - UE</p>
+							</li>
 
-<script type="text/javascript" src="{{ site.url }}/build/js/app.js"></script>
+						</ul>
+					</div>
+					<div class="text-gray-700 flex flex-col">
+						<div class="inline-block py-2 px-3 text-white uppercase font-medium tracking-wide">Follow Me</div>
+						<div class="flex pl-4 justify-start">
+							<a class="block flex items-center text-white hover:text-gray-500 mr-6 no-underline" href="#nunhes">
+								<i class="fab fa-github-alt"></i>
+							</a>
+							<a class="block flex items-center text-white hover:text-gray-500 mr-6 no-underline" href="#ismaelbernardez">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							<a class="block flex items-center text-white hover:text-gray-500 mr-6 no-underline" href="#ambosassociateddotcom">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a class="block flex items-center text-white hover:text-gray-500 no-underline" href="#@nunhes">
+								<i class="fab fa-twitter"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</body>
+		</body>
+	</html>
+</div>
+<div class=" w-full pt-3 pb-4 text-gray-700 text-right border-t border-gray-800 pin-b">
+	<span>copyright &copy;2021 / ambosass.com</span>
+</div></footer><script type="text/javascript" src="{{ site.url }}/build/js/app.js"></script>{% block scripts %}{% endblock %}{% if site.google_analytics_tracking_id %}
+<script>
+	(function (i, s, o, g, r, a, m) {
+i['GoogleAnalyticsObject'] = r;
+i[r] = i[r] || function () {
+(i[r].q = i[r].q || []).push(arguments)
+},
+i[r].l = 1 * new Date();
+a = s.createElement(o),
+m = s.getElementsByTagName(o)[0];
+a.async = 1;
+a.src = g;
+m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-{% block scripts %}
-{% endblock %}
-
-{% if site.google_analytics_tracking_id %}
-
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', '{{site.google_analytics_tracking_id}}', 'auto');
-        ga('send', 'pageview');
-    </script>
-
-{% endif %}
-
-{% block scripts_after %}
-{% endblock %}
-</body>
-</html>
+ga('create', '{{ site.google_analytics_tracking_id }}', 'auto');
+ga('send', 'pageview');
+</script>{% endif %}{% block scripts_after %}{% endblock %}</body></html>

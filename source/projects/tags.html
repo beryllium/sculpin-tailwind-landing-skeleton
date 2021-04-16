@@ -1,0 +1,12 @@
+---
+layout: default
+use: [projects_tags]
+---
+<h1>Tags</h1>
+<ul>
+    {% for tag,projects in data.projects_tags %}
+        <li>
+            <a href="/projects/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>
+        </li>
+    {% endfor %}
+</ul>

@@ -1,27 +1,29 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 p {
   @apply pb-4;
 }
 
 a {
-  @apply text-blue-700;
+  @apply text-teal-700;
 }
 
 
 a:hover {
-  @apply text-blue-400;
+  @apply text-purple-400;
 }
 
 a:visited {
-  @apply text-purple-500;
+  @apply text-purple-400;
 }
 
-nav a,
+/* nav a,
 nav a:hover,
 nav a:visited {
-  @apply text-white;
-}
+  @apply text-red;
+}*/
 
 .img-flip {
   -moz-transform: scaleX(-1);
@@ -44,6 +46,18 @@ ol {
   @apply list-decimal list-inside;
 }
 
-@tailwind components;
 
-@tailwind utilities;
+/* Add the lines below */
+@layer utilities {
+  @variants responsive {
+    .masonry {
+      column-count: 2;
+      column-gap: 1.5em;
+    }
+    .break-inside {
+      break-inside: avoid;
+    }
+  }
+}
+
+@import "../../../node_modules/highlightjs/styles/github.css";
