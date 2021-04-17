@@ -6,7 +6,9 @@ tags:
     - web developement
 categories:
     - productivity
-
+featured_image:
+    image: qr_data.png
+excerpt: The first commit to the Sculpin repository...
 ---
 The first commit to the Sculpin repository was made on December 20th, 2011.
 What a trip since then!

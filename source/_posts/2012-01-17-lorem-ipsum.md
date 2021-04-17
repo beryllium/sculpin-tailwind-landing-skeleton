@@ -3,6 +3,10 @@ title: Lorem Ipsum
 categories:
     - testing
 
+featured_image:
+    image: qr_data.png
+excerpt: Lorem ipsum dolor sit amet, consectetur
+
 # https://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables
 disqus: 
     identifier: # slug_for_current_page

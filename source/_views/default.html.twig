@@ -53,6 +53,9 @@
 						<a href="/projects" class="inline-block py-2 px-3 text-gray-900 hover:text-gray-700 no-underline">Projects</a>
 					</li>
 					<li>
+						<a class="inline-block py-2 px-3 text-gray-900 hover:text-gray-700 no-underline" href="{{ site.url }}/about">About</a>
+					</li>
+					<li>
 						<a href="#" class="inline-block py-2 px-3 text-gray-900 hover:text-gray-700 no-underline">Pricing</a>
 					</li>
 					<li class="pr-2">
@@ -139,8 +142,13 @@
 		</body>
 	</html>
 </div>
-<div class=" w-full pt-3 pb-4 text-gray-700 text-right border-t border-gray-800 pin-b">
-	<span>copyright &copy;2021 / ambosass.com</span>
+<div
+	class=" w-full pt-3 pb-4 text-gray-700 text-right border-t border-gray-200 pin-b">
+	<!-- <span>copyright &copy;2021 / ambosass.com</span> -->
+	<span class="text-muted">&copy;
+		{{ "now"|date("Y") }}
+		{{ site.title }}</span>
+
 </div></footer><script type="text/javascript" src="{{ site.url }}/build/js/app.js"></script>{% block scripts %}{% endblock %}{% if site.google_analytics_tracking_id %}
 <script>
 	(function (i, s, o, g, r, a, m) {

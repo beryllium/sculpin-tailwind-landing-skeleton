@@ -47,21 +47,23 @@ use:
     </div>
     {% endfor %}
   </div>
-</section>
 
-<div>
+<div class="row">
+    <div class="container text-center m-auto">
 {% if page.pagination.previous_page or page.pagination.next_page %}
     <nav class="article clearfix">
     {% if page.pagination.previous_page %}
-    <a class="previous" href="{{ site.url }}{{ page.pagination.previous_page.url }}" title="Previous Page"><span class="title">Previous Page</span></a>
+    <a class="previous first:ml-0 text-xs font-semibold flex w-8 h-8 mx-1 p-0 rounded-full items-center justify-center leading-tight relative border border-solid border-indigo-500 text-white bg-indigo-500" href="{{ site.url }}{{ page.pagination.previous_page.url }}" title="Previous Page"><i class="fas fa-chevron-left"></i></a>
     {% endif %}
     {% if page.pagination.next_page %}
-    <a class="next" href="{{ site.url }}{{ page.pagination.next_page.url }}" title="Next Page"><span class="title">Next Page</span></a>
+    <a class="next first:ml-0 text-xs font-semibold flex w-8 h-8 mx-1 p-0 rounded-full items-center justify-center leading-tight relative border border-solid border-indigo-500 text-white bg-indigo-500" href="{{ site.url }}{{ page.pagination.next_page.url }}" title="Next Page"><i class="fas fa-chevron-right"></i></a>
     {% endif %}
     </nav>
 {% endif %}
+
+</div>
 </div>
 
-
+</section>
 
 

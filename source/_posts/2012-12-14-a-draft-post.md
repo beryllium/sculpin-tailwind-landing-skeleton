@@ -4,6 +4,9 @@ draft: true
 categories:
     - features
 
+featured_image:
+    image: qr_data.png
+excerpt: ll draft posts will automatically be tagged `draft`.
 ---
 This is a draft post. You will only see this if you are running the `dev`
 environment (`dev` is the default).

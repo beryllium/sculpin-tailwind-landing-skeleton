@@ -5,43 +5,44 @@
 {% endblock %}
 
 {% block content_wrapper %}
- <section class="bg-white font-sans antialiased w-full text-left text-black py-8">
+<section class="bg-white font-sans antialiased w-full text-left text-black py-8">
     <article class="container mx-auto p-10 font-normal leading-normal">
         <header>
-            <h2 class="mb-12 section-heading text-4xl wow fadeInDown animated">{{ page.title }}{{ category }}</h2>
-
+            <h2 class="mb-12 section-heading text-4xl wow fadeInDown animated">{{ page.title }}</h2>
         </header>
-        <div>
+        <div id="contido"><img src="{{ site.url }}/assets/img/{{ page.featured_image.image }}"/>
             {{ page.blocks.content|raw }}
         </div>
         {% if page.categories %}
-            <p class="categories">
-            Categories:
+            <div class="metadatos bg-gradient-to-br px-10">
+                <p class="categories uppercase text-sm mt-10">
+            Categorías:
             {% for category in page.categories %}
             <a href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
             {% endfor %}
             </p>
         {% endif %}
         {% if page.tags %}
-            <p class="tags">
-            Tags:
+            <p class="tags uppercase text-sm m-0">
+            Asuntos:
             {% for tag in page.tags %}
             <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
             {% endfor %}
-            </p>
+            </p></div>
         {% endif %}
 
         {% if page.previous_post or page.next_post %}
-            <nav class="article">
-                <ul>
+            <div class="flex flex-wrap overflow-hidden border-t-2 mt-10 pt-10">
+                <div class="w-1/2 overflow-hidden">
                     {% if page.next_post %}
-                        <li>Next: <a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title">{{ page.next_post.title }}</span></a></li>
+                        <p class="uppercase"><span class="p-3 mr-1"><i class="fas fa-chevron-left"></i></span><a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title">{{ page.next_post.title }}</span></a></p>
+                    </div>
                     {% endif %}
+                <div class="w-1/2 overflow-hidden text-right">
                     {% if page.previous_post %}
-                        <li>Previous: <a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span></a></li>
+                        <p class="uppercase"><a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span></a><span class="p-3 ml-1"><i class="fas fa-chevron-right"></i></span></p></div>
                     {% endif %}
-                </ul>
-            </nav>
+            </div>
         {% endif %}
     </article>
 </section>

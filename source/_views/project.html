@@ -8,27 +8,27 @@
 <section class="bg-white font-sans antialiased w-full text-left text-black py-8">
     <article class="container mx-auto p-10 font-normal leading-normal">
   <header>
-    <h2 class="text-4xl py-2 mb-10">{{ page.title }}</h2>
+    <h2 class="mb-12 section-heading text-4xl wow fadeInDown animated">{{ page.title }}</h2>
   {% if page.subtitle %}
     <h3 class="subtitle">{{ page.subtitle }}</h3>
   {% endif %}
   </header>
-  <section class="main_body">
+  <div id="contido" class="main_body"><img src="../assets/img/{{ page.featured_image.image }}"/>
     {{ page.blocks.content|raw }}
-  </section>
-  <section class="taxonomies">
+  </div>
+  <div class="taxonomies">
     <div class="taxonomy">
-        <a href="{{site.url }}/projects/tags">Tags</a>:
+        <a href="{{ site.url }}/projects/tags">Tags</a>:
         {% for tag in page.tags %}
         <a href="{{ site.url }}/projects/tags/{{ tag }}">
             {{ tag }}
         </a>{% if not loop.last %}, {% endif %}
         {% endfor %}
       </div>
-  </section>
-  <footer>
+  </div>
+  <div>
     <p class="published_date">Published: {{page.date|date('F j, Y')}}</p>
-  </footer>
+  </div>
 </article>
 <nav>
     {% if page.pagination.previous_page or page.pagination.next_page %}

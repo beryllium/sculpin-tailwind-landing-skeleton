@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-p {
+@import "../../../node_modules/highlightjs/styles/atom-one-dark.css";
+
+p, ul {
   @apply pb-4;
 }
 
@@ -38,6 +40,11 @@ h1 {
   @apply font-black text-xl;
 }
 
+h2 {
+  font-size: 2.7em;
+}
+
+
 ul {
   @apply list-disc list-inside;
 }
@@ -45,6 +52,8 @@ ul {
 ol {
   @apply list-decimal list-inside;
 }
+
+footer { background-image: linear-gradient(14deg, #A4C339 0%, #6EA644 58%);}
 
 
 /* Add the lines below */
@@ -60,4 +69,4 @@ ol {
   }
 }
 
-@import "../../../node_modules/highlightjs/styles/github.css";
+

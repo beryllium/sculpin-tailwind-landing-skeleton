@@ -6,6 +6,9 @@ tags:
 categories:
     - features
 
+featured_image:
+    image: qr_data.png
+excerpt: Highlighting with your static site generation.
 ---
 You're all programmers, right? And you're writing code snippets on your Sculpin
 powered blog? Yeah. So you want some highlighting with your static site generation?

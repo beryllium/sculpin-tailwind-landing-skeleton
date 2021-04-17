@@ -2,7 +2,9 @@
 title: Live Hacking!
 tags: [sensio, symfony, symfony live]
 categories: [produtividade]
-
+featured_image:
+    image: qr_data.png
+excerpt: Hacked and pizza.
 ---
 Fun times at the Symfony Live San Francisco 2012 Hacking Day! Code
 was hacked and pizza was had. Some pics of the conference are

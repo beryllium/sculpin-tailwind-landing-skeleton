@@ -2,12 +2,13 @@
 title: Aproveitamento do tempo
 tags: [xestión do tempo, desenvolvemento, freelancing]
 categories: [desenvolvemento]
-
+featured_image:
+    image: qr_data.png
+excerpt: Xestionar *ben* o tempo.
 ---
 Cando se traballa, e máis se é por conta propia, é importante xestionar ben o tempo:
 
 - O tempo que empregamos e dedicamos a traballar - e o froito que obtemos, evidentemente-.
-
 - O tempo que nos queda para todo o demais - e hai moito-.
 
 O día non pode ser a xornada laboral. E a xornada de traballo debe durar o que debe durar e non máis. Se nos desviamos do plan de traballo ou nos distraemos o noso rendemento ou produtividade vai verse seguramente penalizado. Temos que atopar logo o noso método, facer o noso plan e remitirnos a el.
@@ -21,7 +22,6 @@ Como creámolo noso mapa? Levando unha axenda.
 Unha axenda contribúe a:
 
 - delimitar a xornada cun horario crible e manexable. Eu tamén engadiría tamén o suficientemente plástico, con tempos de descanso entre momentos de esforzo (MmE).
-
 - dividir o día en unidades de axenda - tarefas-.
 
 E si imos tomando nota do obxectivo de cada fragmento construiremos sen esforzo un rexistro diario do que imos conseguindo.
@@ -41,24 +41,25 @@ Estes resumes:
 - amosarán os logros
 - e centrarannos nos obxectivos
 
-
-
 ## Técnica Pomodoro
 
-- 1 Pomodoro = 25 minutos + descanso de 5 minutos
+Esta é unha técnica, entre outras, con bastante aceptación:
 
-- Despois de 2 Pomodoros, un descanso duns 15 minutos
+- 1 *pomodoro* = 25 minutos + descanso de 5 minutos 🍅 + ☕
+- Despois de 2 *pomodoros*, tomarse un descanso duns 15 minutos 🍅🍅 + (☕ + 🍏 = 🔋)
+- Antes de comezalo día, establecer a lista de tarefas :pencil:
+- Cada *pomodoro* inicialmente é para centrarse nunha tarefa
 
-- Antes de comezalo día, establece a lista de tarefas
-
-- Cada Pomodoro inicialmente é para centrarse nunha tarefa - pero dependerá da tarefa-.
+Claro está, hai que deixar tamén que a nosa división da xornada sexa plástica, e dependendo da(s) tarefa(s), poder varialas duracións cando o consideremos conveniente. ⏳
 
 Hai múltiples aplicacións que poden axudarnos a xestionar todo iso.
 
 O ideal entón é que a aplicación resida na bandexa do sistema e apareza ao final de cada unidade de axenda, e aí poder:
 
 - Identificar a tarefa
-- Resumir estado/resultado
+- Resumir estado/resultado. Poden ser simples marcas ou anotacións, ou resumes máis completos da(s) tarefa(s) desenvolvida(s).
 - Actualizar a lista de tarefas
 
-E tamén a non esquecer tomar un descanso, antes de iniciala seguinte unidade da axenda.
+E, coma non, non esquecer tomares un respiro antes de iniciala seguinte unidade da axenda.
+
+🍅
