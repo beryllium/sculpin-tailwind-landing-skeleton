@@ -1,18 +1,22 @@
 {
-    "name": "beryllium/sculpin-tailwind-landing-skeleton",
+    "name": "nunhes/ambosass.com",
     "description": "Skeleton for Sculpin-based landing page websites",
-    "homepage": "https://whateverthing.com",
+    "homepage": "http://ambosass.com",
     "keywords": ["sculpin", "sculpin-skeleton"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Kevin Boyd",
-            "email": "kevin.boyd@gmail.com",
-            "homepage": "https://whateverthing.com"
+            "name": "nunhes",
+            "email": "nunhes@gmail.com",
+            "homepage": "http://ambosass.com"
         }
     ],
     "require": {
-        "sculpin/sculpin": "^3.1"
+        "sculpin/sculpin": "^3.1",
+
+        "dflydev/embedded-composer-console": "@dev",
+        "dflydev/embedded-composer-core": "@dev",
+        "composer/composer": "@dev",
     },
     "scripts": {
         "publish": [

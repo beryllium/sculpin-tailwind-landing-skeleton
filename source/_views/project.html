@@ -1,0 +1,44 @@
+{% extends 'default' %}
+
+{% block head_meta %}
+    <meta name="robots" content="index, follow">
+{% endblock %}
+
+{% block content_wrapper %}
+<section class="bg-white font-sans antialiased w-full text-left text-black py-8">
+    <article class="container mx-auto p-10 font-normal leading-normal">
+  <header>
+    <h2 class="mb-12 section-heading text-4xl wow fadeInDown animated">{{ page.title }}</h2>
+  {% if page.subtitle %}
+    <h3 class="subtitle">{{ page.subtitle }}</h3>
+  {% endif %}
+  </header>
+  <div id="contido" class="main_body"><img src="../assets/img/{{ page.featured_image.image }}"/>
+    {{ page.blocks.content|raw }}
+  </div>
+  <div class="taxonomies">
+    <div class="taxonomy">
+        <a href="{{ site.url }}/projects/tags">Tags</a>:
+        {% for tag in page.tags %}
+        <a href="{{ site.url }}/projects/tags/{{ tag }}">
+            {{ tag }}
+        </a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+      </div>
+  </div>
+  <div>
+    <p class="published_date">Published: {{page.date|date('F j, Y')}}</p>
+  </div>
+</article>
+<nav>
+    {% if page.pagination.previous_page or page.pagination.next_page %}
+    {% if page.pagination.previous_page %}
+    <a href="{{ site.url }}{{ page.pagination.previous_page.url }}">Newer Projects</a>
+    {% endif %}
+    {% if page.pagination.next_page %}
+    <a href="{{ site.url }}{{ page.pagination.next_page.url }}">Older Projects</a>
+    {% endif %}
+    {% endif %}
+</nav>
+</section>
+{% endblock content_wrapper %}

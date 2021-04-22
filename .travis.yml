@@ -1,0 +1,21 @@
+CODECOV_TOKEN='35620dd1-6c84-4685-88d4-b8cd411c4c85'
+
+language: php
+
+php:
+    - 7.2
+    - 7.3
+    - 7.4
+
+install:
+  - composer install
+
+before_script:
+    - travis_retry composer self-update
+    - travis_retry composer install --no-interaction --prefer-source --dev
+
+script:
+    - vendor/bin/sculpin generate
+
+after_success:
+    - bash <(curl -s https://codecov.io/bash)

@@ -1,27 +1,31 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-p {
+@import "../../../node_modules/highlightjs/styles/atom-one-dark.css";
+
+p, ul {
   @apply pb-4;
 }
 
 a {
-  @apply text-blue-700;
+  @apply text-teal-700;
 }
 
 
 a:hover {
-  @apply text-blue-400;
+  @apply text-purple-400;
 }
 
 a:visited {
-  @apply text-purple-500;
+  @apply text-purple-400;
 }
 
-nav a,
+/* nav a,
 nav a:hover,
 nav a:visited {
-  @apply text-white;
-}
+  @apply text-red;
+}*/
 
 .img-flip {
   -moz-transform: scaleX(-1);
@@ -36,6 +40,11 @@ h1 {
   @apply font-black text-xl;
 }
 
+h2 {
+  font-size: 2.7em;
+}
+
+
 ul {
   @apply list-disc list-inside;
 }
@@ -44,6 +53,20 @@ ol {
   @apply list-decimal list-inside;
 }
 
-@tailwind components;
+footer { background-image: linear-gradient(14deg, #A4C339 0%, #6EA644 58%);}
 
-@tailwind utilities;
+
+/* Add the lines below */
+@layer utilities {
+  @variants responsive {
+    .masonry {
+      column-count: 2;
+      column-gap: 1.5em;
+    }
+    .break-inside {
+      break-inside: avoid;
+    }
+  }
+}
+
+

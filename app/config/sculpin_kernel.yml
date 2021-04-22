@@ -1,3 +1,17 @@
 sculpin_content_types:
-    posts:
-      enabled: false
+  posts:
+    permalink: blog/:year/:month/:day/:filename/
+
+  projects:
+    type: path
+    path: _projects
+    singular_name: project
+    layout: project
+    enabled: true
+    permalink: projects/:title
+    taxonomies:
+      - tags
+# To disable posts (e.g., if you aren't planning on having any posts and Sculpin's watch mode complains):
+#sculpin_content_types:
+#    posts:
+#        enabled: false
