@@ -10,9 +10,8 @@ pagination:
   <div class="row">
     <div class="container text-center m-auto">
     <div class="section_title pb-6">
-    <h4 class="main_title text-3xl">Proxectos</h4>
-            <h6 class="uppercase">Tags</h6>
-    <h2 class="main_title uppercase text-red-800">{{ page.tag }}</h2>
+    <h2 class="main_title text-3xl">Proxectos</h2>
+            <h6 class="uppercase"><span class="text-red-150">Asunto:</span>{{ page.tag }}</h5>
     </div> 
     </div>
     </div>
@@ -23,9 +22,9 @@ pagination:
         <li><a href="{{ project.url }}">{{ project.title }}</a></li>
     {% endfor %}
 </ul>
-</div>
 
-<nav>
+
+<div>
     {% if page.pagination.previous_page or page.pagination.next_page %}
     {% if page.pagination.previous_page %}
     <a href="{{ site.url }}{{ page.pagination.previous_page.url }}">Newer Projects</a>
@@ -34,5 +33,6 @@ pagination:
     <a href="{{ site.url }}{{ page.pagination.next_page.url }}">Older Projects</a>
     {% endif %}
     {% endif %}
-</nav>
+</div>
+</div>
 </section>
